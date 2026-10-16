@@ -1,0 +1,66 @@
+body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(2, 132, 199, 0.3);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(2, 132, 199, 0.6);
+        }
+        input, select, textarea {
+            font-size: 16px !important;
+        }
+        @media (min-width: 640px) {
+            input, select, textarea {
+                font-size: 0.875rem !important;
+            }
+        }
+        .marquee-inner {
+            display: inline-flex;
+            white-space: nowrap;
+        }
+        .marquee-inner:hover {
+            animation-play-state: paused;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-certificate, #printable-certificate * {
+                visibility: visible;
+            }
+            #printable-certificate {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 20px;
+                background: white !important;
+                color: black !important;
+            }
+        }
+
+/* Extra responsive styling */
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; }
+img { max-width: 100%; }
+.president-feature { isolation: isolate; }
+.president-photo-wrap { min-height: 230px; height: 100%; background: linear-gradient(135deg, #e0f2fe, #eef2ff); }
+.president-feature-photo { display: block; width: 100%; height: 100%; min-height: 250px; max-height: 340px; object-fit: cover; object-position: center 22%; }
+.video-card { transition: transform .2s ease, box-shadow .2s ease; }
+.video-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(15, 23, 42, .12); }
+#video-modal-iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; background: #0f172a; }
+@media (max-width: 640px) { .president-feature-photo { min-height: 220px; max-height: 270px; object-position: center 20%; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
